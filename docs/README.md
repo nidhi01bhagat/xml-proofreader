@@ -1,17 +1,16 @@
 # Architecture & Requirements Analysis — Index
 
 **Project:** GenAI-Powered XML Proofreader (assessment)
-**Status (2026-11-23):** D1–D17 approved with adjustments (see 04). All implementation stages are committed:
+**Status (2026-11-23):** D1–D17 accepted with adjustments (see 04). All implementation stages are committed:
 S0 (repository foundation), S1 (encoding check, XML source mapping, tokenization), S2 (annotation, rendering,
 independent verification, rollback), S3 (quotation protection, finding resolution, tracing), S4 (style guide,
 prompt, model clients, pipeline, CLI, validation layer) and S5 (Gemini provider). Test results, measurements and
 known limitations are summarised in the top-level [README](../README.md); risks and measurements in detail are in
-04. Where 03 and 04 disagree, **04 (approval record) wins**.
+04. Where 03 and 04 disagree, **04 (decision record) wins**.
 
 This is a public snapshot. The requirements and source analysis (document 01) and the internal status log are not
 included, because they describe the confidential assessment material; references to "01" in these documents point
-to that excluded analysis. Commit hashes cited in the documents (for example `c67aaec`, `7ed2c177`) refer to the
-internal development history, which is not part of this repository.
+to that excluded analysis. The internal development history is not part of this repository.
 
 ## Files
 
@@ -19,7 +18,7 @@ internal development history, which is not part of this repository.
 |---|---|
 | [02-xml-source-mapping.md](02-xml-source-mapping.md) | XML preservation strategy, Expat mapping algorithm, nested ownership, CDATA/entity/inline rules, encoding policy, quotation policy, verifier, evidence status |
 | [03-final-architecture.md](03-final-architecture.md) | Project structure, modules, finding contract, resolver, provider choice, error policy, security, 32 acceptance criteria, test specification, implementation stages |
-| [04-decision-register.md](04-decision-register.md) | Approval record for D1–D17 (with adjustments), additional requirements AR1–AR5, superseded original recommendations, risks, blockers |
+| [04-decision-register.md](04-decision-register.md) | Decision record for D1–D17 (with adjustments), additional requirements AR1–AR5, superseded original recommendations, risks, blockers |
 
 ## Evidence labels used throughout
 

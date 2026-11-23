@@ -14,8 +14,7 @@ and marks each problem in place with an `<error>` tag, leaving every other byte 
 - This repository is a clean public snapshot of a project developed in stages S0–S5 (repository foundation, XML
   mapping, annotation and verification, quotation-aware finding resolution, model clients and CLI, Gemini
   provider). The internal development history is not included.
-- The code was validated at internal development commit `7ed2c177` (a reference that does not exist in this
-  repository), and this snapshot was validated again on a fresh installation (see [Testing](#testing)).
+- This snapshot was validated on a fresh installation (see [Testing](#testing)).
 - Model output has been validated live only on invented text (see [Known limitations](#known-limitations)).
 
 ## Key capabilities
@@ -162,9 +161,8 @@ It includes byte-for-byte golden tests, end-to-end CLI tests, property-based tes
 suite (malformed XML, entity expansion, encodings, namespaces, CDATA, nested paragraphs, size limits).
 
 Result on a fresh installation of this snapshot with a new Python 3.11.9 environment: **2,655 passed, 13 skipped**,
-also with `--hypothesis-seed=77` (the same result as at internal development commit `7ed2c177`). The 13 skips are
-11 checks against private assessment files that are not part of the repository and 2 symbolic-link tests that
-need symlink permission on Windows.
+also with `--hypothesis-seed=77`. The 13 skips are 11 checks against private assessment files that are not part of
+the repository and 2 symbolic-link tests that need symlink permission on Windows.
 
 `scripts/evaluate.py` compares a corrected file with a reference annotation of the same document and reports
 precision, recall and F1 at four matching levels (no pass threshold):

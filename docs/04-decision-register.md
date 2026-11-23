@@ -1,7 +1,7 @@
 # 04 — Decision Register
 
-**Status (2026-11-21):** D1–D17 **APPROVED** by the user, with the adjustments below, including the S1, S2 and S3
-implementation decisions. Stage S5 additionally requires API access. **S4 decisions approved 2026-11-22** (rows
+**Status (2026-11-21):** D1–D17 **accepted**, with the adjustments below, including the S1, S2 and S3
+implementation decisions. **S4 decisions approved 2026-11-22** (rows
 "S4 …" below; "S4 security (final)" supersedes the original S4 security row). S4.1 accepted 2026-11-22. S4.2 closed
 2026-11-22 (S4.2a accepted; S4.2b classification approved). The "S4.5 client construction" row and its two
 guards were approved 2026-11-22 after the S4.5 audit; S4.5 closed 2026-11-22. S4.6 (pipeline and
@@ -11,7 +11,7 @@ S4.8c not-proofread fix (Option A) approved 2026-11-22. S4.8a-S4.8d closed 2026-
 completed and committed with S4 on 2026-11-23 (row "S4.8 validation layer"). S5 (Gemini provider) committed
 2026-11-23 (row "S5 Gemini provider").
 
-## Approval record (2026-11-21) — adjustments override the table further down
+## Decision record (2026-11-21) — adjustments override the table further down
 
 | # | Approved form |
 |---|---|
@@ -75,18 +75,17 @@ completed and committed with S4 on 2026-11-23 (row "S4.8 validation layer"). S5 
 
 ---
 
-**Original recommendation (2026-11-20):** READY FOR IMPLEMENTATION once D1–D17 are approved.
+**Original recommendation (2026-11-20):** start implementation once D1–D17 are accepted (accepted 2026-11-21, with the
+adjustments in the decision record above).
 
-## Approved (fixed by the assignment or user instructions)
+## Fixed requirements (from the assignment)
 
 - Python 3.11 CLI; inputs: XML path, `--lang`, DOCX style guide; output `<name>.corrected.xml` in the input directory.
 - `<error type="…" correction="…" [reason="…"]>`; `reason` required for `styleguide`.
 - Exact text preservation; preserve unrelated tags, attributes, namespaces, CDATA.
 - Performance metrics (time, memory); error handling and logging; README; GitHub submission.
-- Schedule: build Nov 22, QA Nov 23, submit by Nov 24 10:00 (earlier if done).
-- No implementation until approval.
 
-## Original recommendations (2026-11-20) — superseded wherever the approval record above differs
+## Original recommendations (2026-11-20) — superseded wherever the decision record above differs
 
 | # | Decision | Recommendation |
 |---|---|---|
