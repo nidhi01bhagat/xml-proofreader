@@ -1,0 +1,1 @@
+<!DOCTYPE p [<!ENTITY m "<b>x</b>">]><p>teh &m; end</p>

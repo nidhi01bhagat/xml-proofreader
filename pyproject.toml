@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "proofreader"
+version = "0.1.0"
+description = "GenAI-powered XML proofreader that annotates <p> text with <error> tags while preserving the source bytes."
+readme = "README.md"
+requires-python = ">=3.11"
+# Single source of truth for dependencies (see docs/04-decision-register.md, D10 resolution).
+# XML handling, DOCX extraction and metrics use the standard library only.
+dependencies = [
+    "anthropic>=2.12,<3",   # D1: Anthropic SDK; caching/structured-output support verified before use (D13)
+    "pydantic>=2.7,<3",     # finding contract validation (D9)
+    "python-dotenv>=1.0,<2" # optional .env loading; key never logged
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8,<10",
+    "hypothesis>=6.100,<7", # property tests (S2)
+    "httpx2>=2.0,<3",       # S4: httpx2.MockTransport for offline SDK tests (the anthropic SDK's own HTTP library)
+]
+
+# No console-script entry point: the CLI runs as `python -m proofreader` (src/proofreader/__main__.py).
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+proofreader = ["prompts/*.md", "prompts/*.json"]
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests"]
+pythonpath = ["src"]
+# Live tests are excluded by default; a later "-m live" on the command line overrides this (S4.1).
+addopts = "-ra --strict-markers --strict-config -m 'not live'"
+xfail_strict = true
+markers = [
+    "live: calls the real Anthropic API; opt-in only (deselected unless -m live is given)",
+]
+filterwarnings = ["error"]

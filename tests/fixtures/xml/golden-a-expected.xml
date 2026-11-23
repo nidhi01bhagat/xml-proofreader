@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- invented golden document -->
+<book xmlns="urn:example:book" xmlns:m="urn:example:meta" m:id="g1">
+  <p>Our team will <error type="spelling" correction="receive">recieve</error> <error type="spelling" correction="the">teh</error> final report on <error type="capitalization" correction="Monday" reason="Days of the week are capitalized">monday</error>.</p>
+  <p m:lang="en"><error type="spelling" correction="Salt &amp; pepper" reason="Spelling of &quot;pepper&quot;">Salt &amp; peper</error> are on the <em><error type="spelling" correction="table">tabel</error></em>; <![CDATA[keep <this>]]> intact.</p>
+  <section><p>Outer paragraph <p>Inner <error type="spelling" correction="paragraph">paragrph</error> here</p> continues <error type="grammar" correction="here">hear</error>.</p></section>
+  <p>Clean paragraph with nothing to fix.</p>
+  <p><error type="spelling" correction="x">old</error> existing error kept.</p>
+</book>

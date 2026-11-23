@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- invented golden document -->
+<book xmlns="urn:example:book" xmlns:m="urn:example:meta" m:id="g1">
+  <p>Our team will recieve teh final report on monday.</p>
+  <p m:lang="en">Salt &amp; peper are on the <em>tabel</em>; <![CDATA[keep <this>]]> intact.</p>
+  <section><p>Outer paragraph <p>Inner paragrph here</p> continues hear.</p></section>
+  <p>Clean paragraph with nothing to fix.</p>
+  <p><error type="spelling" correction="x">old</error> existing error kept.</p>
+</book>

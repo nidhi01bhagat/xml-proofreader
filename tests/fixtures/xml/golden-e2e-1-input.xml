@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- invented end-to-end golden document (S4.8a) -->
+<?build stage="e2e"?>
+<report xmlns="urn:example:report" xmlns:x="urn:example:extra" x:version="2">
+  <title>Quarterly notes</title>
+  <p>Our office will recieve the new chairs on tuesday morning.</p>
+  <p x:tone="calm">Tea &amp; cofee are served in the <em>lobbby</em> daily.</p>
+  <x:p>The café opened earlier then usual this week.</x:p>
+  <p>Sales grew by 12% in the spring.</p>
+  <section><p>Outer text <p>Inner text has a extra word</p> ends here.</p></section>
+  <p>Everything here is correct.</p>
+  <p><error type="spelling" correction="x">old</error> stays as it is.</p>
+  <p>Data <![CDATA[<raw> & stuff]]> follows the the rules.</p>
+  <p>   </p>
+</report>

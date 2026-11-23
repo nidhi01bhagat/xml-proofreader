@@ -1,0 +1,1 @@
+<!DOCTYPE p [<!ENTITY co "Acme corp">]><p>See &co; now</p>

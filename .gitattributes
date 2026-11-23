@@ -1,0 +1,13 @@
+# Normalise source/docs to LF in the repository and working copy (independent of core.autocrlf).
+* text=auto eol=lf
+
+# XML/test fixtures are byte-exact test data (CRLF, lone CR, BOM, encodings are deliberate).
+# Never convert line endings or treat them as text.
+tests/fixtures/** -text
+*.xml -text
+# Golden fixtures contain deliberate CRLF line endings: exempt only them from whitespace checks
+# (git diff --check would report each CR as trailing whitespace). Whitespace checks stay on elsewhere.
+tests/fixtures/xml/golden-*.xml -whitespace
+
+# Binary formats
+*.docx binary

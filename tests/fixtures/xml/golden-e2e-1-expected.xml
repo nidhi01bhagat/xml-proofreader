@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- invented end-to-end golden document (S4.8a) -->
+<?build stage="e2e"?>
+<report xmlns="urn:example:report" xmlns:x="urn:example:extra" x:version="2">
+  <title>Quarterly notes</title>
+  <p>Our office will <error type="spelling" correction="receive" reason="Misspelling">recieve</error> the new chairs on <error type="capitalization" correction="Tuesday" reason="Days of the week are capitalized">tuesday</error> morning.</p>
+  <p x:tone="calm">Tea &amp; <error type="spelling" correction="coffee" reason="Misspelling">cofee</error> are served in the <em><error type="spelling" correction="lobby" reason="Misspelling">lobbby</error></em> daily.</p>
+  <x:p>The café opened earlier <error type="grammar" correction="than" reason="Use &quot;than&quot; for comparisons">then</error> usual this week.</x:p>
+  <p>Sales grew by <error type="styleguide" correction="12 per cent" reason="House style: write per cent">12%</error> in the spring.</p>
+  <section><p>Outer text <p>Inner text has <error type="grammar" correction="an extra" reason="Use an before a vowel sound">a extra</error> word</p> ends here.</p></section>
+  <p>Everything here is correct.</p>
+  <p><error type="spelling" correction="x">old</error> stays as it is.</p>
+  <p>Data <![CDATA[<raw> & stuff]]> follows <error type="grammar" correction="the" reason="Repeated word">the the</error> rules.</p>
+  <p>   </p>
+</report>
